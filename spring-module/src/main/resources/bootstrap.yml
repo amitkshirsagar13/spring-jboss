@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-module
+  cloud:
+    config:
+      label: master
+      uri: http://localhost:8888/registry/config
+      username: config
+      password: config
+  profiles:
+    active: local
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+  client:
+    serviceUrl:
+      defaultZone: http://config:config@localhost:8888/registry/eureka

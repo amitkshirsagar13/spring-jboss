@@ -1,0 +1,7 @@
+info:
+  component: Spring Module Service
+server:
+  hostname: localhost
+  port: 8080
+dynamic:
+  message: New Fucker...dude...
