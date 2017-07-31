@@ -2,14 +2,14 @@ spring:
   cloud:
     config:
       server:
+        native:
+          search-locations: classpath:spring-config-master/
         prefix: /config
-        git:
-          uri: file:///c:/opt/config-repo/spring-config-master
   profiles:
-    active: local
+    active: native 
 server:
-  port: 8888
   context-path: /registry
+  port: 8888
 security:
   basic:
     enabled: true
