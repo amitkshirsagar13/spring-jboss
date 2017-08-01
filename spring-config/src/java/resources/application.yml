@@ -1,12 +1,13 @@
 spring:
   cloud:
     config:
+      label: local
       server:
         native:
           search-locations: classpath:spring-config-master/
         prefix: /config
   profiles:
-    active: native 
+    active: native
 server:
   context-path: /registry
   port: 8888
@@ -16,12 +17,12 @@ security:
   user:
     name: config
     password: config
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
 management:
   context-path: /admin
   security:
     enabled: true
     
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

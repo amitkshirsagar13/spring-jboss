@@ -1,11 +1,11 @@
 spring:
   application:
     name: spring-module
+  profiles:
+    active: local
   cloud:
     config:
       label: master
       uri: http://localhost:8888/registry/config
       username: config
       password: config
-  profiles:
-    active: local

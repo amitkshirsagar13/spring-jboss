@@ -1,0 +1,9 @@
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+  client:
+    serviceUrl:
+      defaultZone: http://config:config@localhost:8888/registry/eureka
+    enabled: true
+    registerWithEureka: false
+    fetchRegistry: false    

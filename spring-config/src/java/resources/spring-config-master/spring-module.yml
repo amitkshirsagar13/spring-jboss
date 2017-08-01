@@ -1,9 +1,13 @@
 dynamic:
   error: Fucked Error
+
 eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 5
   client:
-    serviceUrl:
-      defaultZone: http://config:config@localhost:8888/registry/eureka
+    registerWithEureka: false
+    fetchRegistry: false
     enabled: true
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true

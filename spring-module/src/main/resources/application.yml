@@ -1,3 +1,6 @@
+server:
+  context-path: /rest
+
 security:
   basic:
     enabled: false
